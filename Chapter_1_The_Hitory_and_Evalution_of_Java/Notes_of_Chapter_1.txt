@@ -1,5 +1,5 @@
 /* 
- This is a notes of chapter 1 The Histroy and Evalution of Java
+ This is a notes of chapter 2 An Overview of Java
 --------------------------------------------------------------------------------------------------------------------------------
 1.
 */
