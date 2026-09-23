@@ -1,5 +1,7 @@
 /* 
  This is a notes of chapter 2 An Overview of Java
 --------------------------------------------------------------------------------------------------------------------------------
-1.
+1. There are mainly two paradigms all computer programming codes consists of two elements.
+  a. Code 
+  b. Data
 */
