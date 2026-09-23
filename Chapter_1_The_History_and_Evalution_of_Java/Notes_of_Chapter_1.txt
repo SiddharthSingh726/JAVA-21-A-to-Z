@@ -4,4 +4,8 @@
 1. There are mainly two paradigms all computer programming codes consists of two elements.
   a. Code 
   b. Data
+2. These are the two paradigms that govern how a program is constructed.
+  a. Process oriented model.
+  b. Object oriented programming
+2.a Process oriented model ----> 
 */
