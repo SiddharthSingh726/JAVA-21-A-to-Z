@@ -8,5 +8,8 @@ public class Task2_Marks {
         int total = Maths + Science + English; // calculate the total in a fourth variable
         System.out.println("Maths: " + Maths + ", Science: " + Science + ", English: " + English); // Print the first line with three statements, one per subject.
         System.out.println("Total: " + total);
+        Maths = 90; // change the value of Maths to 90
+        total = Maths + Science + English; // recalculate the total
+        System.out.println("Total: " + total); // print the new total
     }
 }
