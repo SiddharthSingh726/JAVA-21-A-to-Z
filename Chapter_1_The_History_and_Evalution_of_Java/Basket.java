@@ -11,6 +11,5 @@ public class Basket {
         apples = 0;
         System.out.print("Apples: " + apples);
         System.out.println(", Oranges: " + oranges);
-        System.out.println("Total: " + apples + oranges);
     }
 }
