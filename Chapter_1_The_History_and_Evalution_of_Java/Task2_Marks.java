@@ -1,6 +1,6 @@
 /*write your own program. Create Marks.java from scratch. Store three marks in three int variables: 
 Maths 78, Science 85 and English 92. Calculate the total in a fourth variable. */
-public class Marks {
+public class Task2_Marks {
     public static void main (String[] args){
         int Maths = 78;
         int Science = 85;
