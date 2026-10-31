@@ -2,9 +2,9 @@
 public class Task1_Basket {
     public static void main (String[] args) {
         int apples;                  // make a box named apples
-        apples = 8;                  // put 8 in the box
+        apples = 5;                  // put 8 in the box
         int oranges = 0;
-        oranges = oranges + apples;    // make a second box
+        oranges = 3;    // make a second box
         int Total = apples + oranges;    // add the two boxes together
         System.out.println("Total: " + Total);  // print the total
     }
