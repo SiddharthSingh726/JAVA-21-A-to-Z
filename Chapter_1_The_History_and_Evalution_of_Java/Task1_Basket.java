@@ -5,8 +5,8 @@ public class Task1_Basket {
         apples = 8;                  // put 8 in the box
         int oranges = 0;
         oranges = oranges + apples;    // make a second box
-        System.out.println("Total: " + apples);
-        System.out.println("Total: " + oranges);
+        int Total = apples + oranges;    // add the two boxes together
+        System.out.println("Total: " + Total);  // print the total
     }
     
 }
