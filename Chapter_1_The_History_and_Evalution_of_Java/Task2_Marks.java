@@ -2,16 +2,16 @@
 Maths 78, Science 85 and English 92. Calculate the total in a fourth variable. */
 public class Task2_Marks {
     public static void main (String[] args){
-        int Maths = 78;
-        int Science = 85;
-        int English = 92;
-        int total = Maths + Science + English; // calculate the total in a fourth variable
-        System.out.print("Maths: " + Maths); // Print the first line, one per subject.
-        System.out.print(" Science: " + Science); // Print the second line, one per subject.
-        System.out.println(" English: " + English); // Print the third line, one per subject.
+        int maths = 78;
+        int science = 85;
+        int english = 92;
+        int total = maths + science + english; // calculate the total in a fourth variable
+        System.out.print("Maths: " + maths); // Print the first line, one per subject.
+        System.out.print(" Science: " + science); // Print the second line, one per subject.
+        System.out.println(" English: " + english); // Print the third line, one per subject.
         System.out.println("Total: " + total); // print the total
-        Maths = 90; // change the value of Maths to 90
-        total = Maths + Science + English; // recalculate the total
+        maths = 90; // change the value of Maths to 90
+        total = maths + science + english; // recalculate the total
         System.out.println("Total: " + total); // print the new total
     }
 }
