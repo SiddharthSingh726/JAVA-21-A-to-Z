@@ -23,4 +23,126 @@
         System.out.println("Hello, I am learning Java");
     }
 }
-    
+
+========================================================================================================================
+3. JIT (JUST-IN-TIME) COMPILATION IN JAVA
+========================================================================================================================
+
+A. WHAT IS BYTECODE?
+--------------------
+- When we compile a Java source file (.java) using javac, Java produces bytecode (.class).
+- Bytecode is an intermediate set of instructions understood by the Java Virtual Machine (JVM).
+- Bytecode is not the same as native machine code, which a processor executes directly.
+- The JVM runs bytecode on the relevant operating system and hardware.
+
+B. WHAT DOES THE INTERPRETER DO?
+--------------------------------
+- The interpreter executes bytecode instructions while the program is running.
+- Interpreting instructions can involve extra work compared with executing native machine code.
+- If all code were only interpreted, execution could be slower for programs that run for a long time.
+
+C. WHAT IS JIT?
+---------------
+JIT stands for JUST-IN-TIME COMPILER.
+
+- Modern JVMs use both interpretation and JIT compilation.
+- While the program runs, the JVM collects information about how the code is being used.
+- It identifies methods or sections of code that execute frequently.
+- The JIT compiler can compile selected frequently executed code into native machine code.
+- The processor can execute this compiled machine code directly.
+- The compiled code can be reused, reducing the need to interpret that code again.
+
+D. WHAT IS HOT CODE / A HOT SPOT?
+---------------------------------
+- Hot code means a method or section of code that executes frequently.
+- A hot spot is a frequently executed part of the program that the JVM may choose to optimize.
+- Cold code is code that executes infrequently.
+
+Example:
+
+    Method                 Number of executions
+    -------------------------------------------
+    login()                10 times
+    calculate()            5,000,000 times
+    processPayment()       20 times
+
+Here, calculate() executes much more frequently. The JVM may identify it as hot code and compile it using the JIT compiler.
+
+E. HOW DOES JIT WORK?
+---------------------
+1. javac compiles Java source code (.java) into bytecode (.class).
+2. The JVM starts running the bytecode.
+3. The JVM observes the program while it executes and gathers runtime information.
+4. It identifies frequently executed methods or code sections.
+5. The JIT compiler compiles selected hot code into native machine code.
+6. The JVM can reuse the compiled code during later executions.
+
+F. WHY CAN JAVA BECOME FASTER AFTER RUNNING FOR SOME TIME?
+----------------------------------------------------------
+- A Java application may take some time to warm up because the JVM starts, loads classes, executes code and performs JIT compilation.
+- As the application runs, the JVM gathers information about its behavior.
+- The JIT compiler can use that information to optimize frequently executed code.
+- Therefore, long-running Java applications can become very fast and may achieve performance close to native applications such as C++ in some workloads.
+
+IMPORTANT:
+Java is not guaranteed to be as fast as C++. Actual performance depends on the application, algorithms, JVM, hardware and workload. JIT compilation does not guarantee that every method will be compiled.
+
+G. WHAT IS HOTSPOT JVM?
+-----------------------
+- HotSpot is a widely used JVM implementation in OpenJDK and Oracle JDK.
+- It uses runtime profiling and optimization techniques, including JIT compilation.
+- It identifies frequently executed code (hot spots) and can optimize that code to improve performance.
+
+H. INTERPRETER VS JIT COMPILER
+------------------------------
+    Interpreter:
+    - Executes bytecode instructions.
+    - Does not need to compile every method into native machine code.
+
+    JIT Compiler:
+    - Compiles selected frequently executed bytecode into native machine code.
+    - Helps reduce repeated interpretation overhead for compiled code.
+
+    Modern JVMs use interpretation and JIT compilation together.
+
+I. COMPLETE JAVA EXECUTION FLOW
+-------------------------------
+    Java Source Code (.java)
+              |
+              v
+        javac Compiler
+              |
+              v
+        Bytecode (.class)
+              |
+              v
+             JVM
+              |
+        +-----+------+
+        |            |
+        v            v
+    Interpreter   JIT Compiler
+                     |
+              Identifies hot code
+                     |
+              Compiles selected code
+                     |
+                     v
+             Native Machine Code
+                     |
+                     v
+               CPU executes it
+
+J. IMPORTANT TERMS
+------------------
+- JVM: Java Virtual Machine; runs Java bytecode.
+- Bytecode: Intermediate instructions produced by the Java compiler.
+- Interpreter: Executes bytecode instructions.
+- JIT: Just-In-Time compiler; compiles selected hot code into native machine code at runtime.
+- Hot Code: Code that executes frequently.
+- Runtime Profiling: Collecting information about program behavior while it runs.
+- Native Machine Code: Instructions that the processor can execute directly.
+- HotSpot: A widely used JVM implementation that uses runtime profiling and optimization techniques.
+
+ONE-LINE SUMMARY:
+JIT compilation improves Java performance by identifying frequently executed code and compiling selected parts into native machine code at runtime, allowing the processor to execute them more efficiently.
