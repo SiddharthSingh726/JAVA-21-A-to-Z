@@ -1,0 +1,26 @@
+/* Java’s compiler (javac) does not produce machine code. It produces bytecode — instructions for an imaginary computer called the Java Virtual Machine. 
+   Bytecode is highly optimised but runs on no real hardware. 
+
+           Hello.java
+             │  javac  (compile once)
+             ▼
+        Hello.class   ←  bytecode: same file, every platform
+             │
+     ┌───────┼────────┐
+     ▼       ▼        ▼
+  JVM on   JVM on   JVM on
+  Windows   Mac     Linux
+     │       │        │
+     ▼       ▼        ▼
+   runs    runs     runs
+  ------------------------------------------------------------------------------------------------------------------------------
+    
+  ------------------------------------------------------------------------------------------------------------------------------
+   2. Make a folder, create a file named exactly Hello.java, and type this by hand:
+   a. for compiling we type first javac <filename.java> than java <filename> in terminal 
+    public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello, I am learning Java");
+    }
+}
+    
