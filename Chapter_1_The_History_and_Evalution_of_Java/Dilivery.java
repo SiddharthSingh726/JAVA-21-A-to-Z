@@ -8,6 +8,6 @@ public class Dilivery {
         } else {
             dilevery = 40;
         }
-        System.out.println("Bill: "+bill+", DIlivery: "+dilevery+", Total: "+(bill+dilevery));
+        System.out.println("Bill: "+bill+", Dilivery: "+dilevery+", Total: "+(bill+dilevery));
     }
 }
