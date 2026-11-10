@@ -144,3 +144,81 @@ J. IMPORTANT TERMS
 
 ONE-LINE SUMMARY:
 JIT compilation improves Java performance by identifying frequently executed code and compiling selected parts into native machine code at runtime, allowing the processor to execute them more efficiently.
+
+PART 2.3 — THE IF STATEMENT
+
+1. DECISION-MAKING WITH IF
+- An if statement allows a program to execute code only when a condition is true.
+- If the condition is false, Java skips the block and continues with the next statement.
+
+  if (marks > 50) {
+      System.out.println("Passed");
+  }
+
+2. COMPARISON OPERATORS
+- >  : Greater than
+- <  : Less than
+- == : Equal to
+- >= : Greater than or equal to
+- <= : Less than or equal to
+- != : Not equal to
+- Comparison expressions return a boolean value: true or false.
+
+3. ASSIGNMENT (=) VS COMPARISON (==)
+- = assigns a value to a variable.
+- == compares two values.
+- An assignment produces the assigned value, not a boolean.
+- Java requires an if condition to produce a boolean.
+- Therefore, if (marks = 95) causes an error because an int cannot be converted to boolean.
+
+4. CURLY BRACES AND STATEMENT SCOPE
+- With {}, all statements inside the braces belong to the if block.
+- Without braces, if controls only the immediately following statement.
+- Indentation does not determine which statements belong to the block.
+- Always use curly braces, even for a single statement.
+
+5. LOCAL VARIABLES AND DEFINITE ASSIGNMENT
+- A local variable must be declared before it is used.
+- Declaration introduces the variable's name and type; initialization gives it its first value.
+- A local variable must also be assigned before its value is read.
+- Java checks every possible execution path during compilation.
+- This rule is called definite assignment: Java must be able to prove that a local variable has been assigned on every possible path before it is used.
+
+  int bonus;
+
+  if (marks > 90) {
+      bonus = 10;
+  }
+
+  System.out.println(bonus); // Compile-time error: bonus might not have been initialized
+
+- The error occurs because the condition could be false, leaving bonus without a value.
+
+6. WAYS TO INITIALIZE A LOCAL VARIABLE SAFELY
+- Initialize it when declaring:
+
+  int bonus = 0;
+
+  if (marks > 90) {
+      bonus = 10;
+  }
+
+- Or assign it on every branch:
+
+  int bonus;
+
+  if (marks > 90) {
+      bonus = 10;
+  } else {
+      bonus = 0;
+  }
+
+- In both examples, bonus has a value before it is used.
+
+7. IMPORTANT DISTINCTIONS
+- Declaration introduces a variable; initialization gives it a starting value.
+- A variable must be declared within a scope where it can be accessed.
+- A local variable must be initialized before its value is read.
+- An if condition must produce true or false.
+- Braces control statement grouping; indentation does not.
+- Compilation checks code validity; runtime is when the program executes.
