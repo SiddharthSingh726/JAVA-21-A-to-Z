@@ -1,4 +1,4 @@
-public class Dilivery {
+public class Delivery {
     public static void main (String [] args) {
         int bill = 600;
 
