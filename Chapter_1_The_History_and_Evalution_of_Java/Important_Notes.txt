@@ -242,3 +242,70 @@ Method 2: Assign a value on every branch
 ============================
 - Local variable: the wall is the method.
 - Private instance variable: the wall is the class.
+
+REVISION — THE IF STATEMENT
+===========================
+
+1. IF STATEMENT
+---------------
+- Executes code only when its condition is true.
+- If the condition is false, Java skips the block.
+
+2. CONDITIONS AND COMPARISON OPERATORS
+--------------------------------------
+- The condition is written inside round brackets ().
+- It must produce a boolean value: true or false.
+- Comparison operators:
+    >   Greater than
+    <   Less than
+    ==  Equal to
+    >=  Greater than or equal to
+    <=  Less than or equal to
+    !=  Not equal to
+
+3. ASSIGNMENT (=) VS COMPARISON (==)
+------------------------------------
+- = assigns or stores a value.
+- == compares two values.
+- if (x = 5) causes a type error because the condition
+  produces an int instead of a boolean.
+
+4. CURLY BRACES
+---------------
+- Without braces, if controls only the next statement.
+- Java ignores indentation when determining code blocks.
+- Always use braces to avoid unexpected execution.
+
+5. ELSE STATEMENT
+-----------------
+- else defines the alternative path when the if condition
+  is false.
+- Exactly one of the if and else blocks executes.
+
+6. BOUNDARY CONDITIONS
+----------------------
+- Always check values at the boundary.
+- Example: 10 > 10 evaluates to false.
+- Greater than (>) does not include equality.
+
+7. DEFINITE ASSIGNMENT
+----------------------
+- Java checks every possible execution path at compile time.
+- A local variable must have a value before it is used.
+- Every possible path must assign a value.
+- "Variable might not have been initialized" means Java
+  cannot guarantee that the variable has a value.
+
+8. TYPES OF COMPILE-TIME ERRORS
+-------------------------------
+- Syntax Error: Java cannot understand the code structure.
+- Type Error: Java understands the code, but a value has
+  an incompatible type.
+
+IMPORTANT REMINDERS
+-------------------
+- if requires a boolean condition.
+- = assigns; == compares.
+- Braces define blocks, not indentation.
+- Check boundary values carefully.
+- Initialize local variables before using their values.
