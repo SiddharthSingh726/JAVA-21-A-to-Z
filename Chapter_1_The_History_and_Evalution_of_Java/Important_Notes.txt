@@ -237,3 +237,8 @@ Method 2: Assign a value on every branch
 - An if condition must produce true or false.
 - Braces control statement grouping; indentation does not.
 - Compilation checks code validity; runtime is when the program executes.
+
+8. Scope of variables
+============================
+- Local variable: the wall is the method.
+- Private instance variable: the wall is the class.
