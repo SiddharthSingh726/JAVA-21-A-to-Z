@@ -1,4 +1,4 @@
-public class Loops_Task1 {
+public class Loops_Task1_a {
     public static void main(String[] args) {
         int total = 0;
 
