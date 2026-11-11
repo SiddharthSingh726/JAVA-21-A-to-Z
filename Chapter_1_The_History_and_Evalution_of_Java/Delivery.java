@@ -1,6 +1,6 @@
 public class Delivery {
     public static void main (String [] args) {
-        int bill = 600;
+        int bill = 450;
 
         int dilevery;
         if (bill > 500) {
