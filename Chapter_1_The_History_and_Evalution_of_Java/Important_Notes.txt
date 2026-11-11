@@ -340,19 +340,16 @@ Syntax:
 
 Execution flow:
 
-    Initialization
-          |
-       Condition
-          |
-       True?
-       /   \
-     Yes    No
-      |      |
-     Body   End
-      |
-   Iteration
-      |
-   Condition (repeat)
+      start: int i = 0
+       │
+       ▼
+  ┌─► check: i < 3 ? ── false ──► loop ends, carry on below it
+  │        │ true
+  │        ▼
+  │    body: run the code in { }
+  │        │
+  │        ▼
+  └─── step: i++
 
 4. CONDITION IS CHECKED FIRST
 -----------------------------
