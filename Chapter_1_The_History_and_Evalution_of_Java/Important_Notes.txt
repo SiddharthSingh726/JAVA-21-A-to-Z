@@ -309,3 +309,104 @@ IMPORTANT REMINDERS
 - Braces define blocks, not indentation.
 - Check boundary values carefully.
 - Initialize local variables before using their values.
+
+REVISION — THE FOR LOOP
+=======================
+
+1. FOR LOOP
+-----------
+- A for loop repeatedly executes its body while its condition is true.
+- When the condition becomes false, the loop terminates.
+
+2. THREE PARTS OF A FOR LOOP
+----------------------------
+Syntax:
+
+    for (initialization; condition; iteration) {
+        // Loop body
+    }
+
+- Initialization: Sets the starting value.
+- Condition: Checks whether the loop should execute.
+- Iteration: Updates the loop variable after each round.
+
+3. EXECUTION ORDER
+------------------
+- Initialization executes only once.
+- Condition is checked before every iteration.
+- If true, the loop body executes.
+- Iteration executes after the body.
+- The process repeats until the condition becomes false.
+
+Execution flow:
+
+    Initialization
+          |
+       Condition
+          |
+       True?
+       /   \
+     Yes    No
+      |      |
+     Body   End
+      |
+   Iteration
+      |
+   Condition (repeat)
+
+4. CONDITION IS CHECKED FIRST
+-----------------------------
+- The condition is checked before the first iteration.
+- If it is false initially, the loop body executes zero times.
+
+5. INCREMENT AND DECREMENT
+--------------------------
+- i++ is shorthand for i = i + 1.
+- i-- is shorthand for i = i - 1.
+- The iteration section can contain any valid calculation.
+
+Examples:
+
+    i = i + 3
+    i = i - 3
+    i = i * 2
+
+6. < VS <= (BOUNDARY CONDITIONS)
+--------------------------------
+- i < 5  : Stops before reaching 5.
+- i <= 5 : Includes 5.
+- An off-by-one error occurs when a loop executes
+  one iteration too many or too few.
+
+7. VARIABLE SCOPE
+-----------------
+- A variable declared inside the for brackets is limited
+  to the scope of that for loop.
+
+    for (int i = 0; i < 5; i++) {
+        System.out.println(i);
+    }
+
+- The variable i cannot be accessed outside its scope.
+
+8. CURLY BRACES
+---------------
+- Without braces, the loop controls only the next statement.
+- With braces, all statements inside the block repeat.
+- Always use braces for clarity and safety.
+
+9. VERIFY EVERY ITERATION
+-------------------------
+- Do not check only the final output or total.
+- Compare every printed line with the expected output.
+- A program can produce a correct total while containing
+  an error in individual iterations.
+
+IMPORTANT REMINDERS
+-------------------
+- Initialization runs once.
+- Condition is checked before every iteration.
+- Iteration runs after the loop body.
+- A false initial condition means zero iterations.
+- < excludes the boundary; <= includes it.
+- Check every line of output.
