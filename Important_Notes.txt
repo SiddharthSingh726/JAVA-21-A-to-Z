@@ -407,3 +407,312 @@ IMPORTANT REMINDERS
 - A false initial condition means zero iterations.
 - < excludes the boundary; <= includes it.
 - Check every line of output.
+
+
+PART 2.4 — NAMES, LITERALS, COMMENTS AND KEYWORDS
+================================================
+
+1. THE SEVEN KINDS OF TOKENS
+----------------------------
+Java programs are made up of seven kinds of pieces (tokens):
+
+    1. Whitespace
+    2. Identifiers
+    3. Literals
+    4. Comments
+    5. Operators
+    6. Separators
+    7. Keywords
+
+
+2. WHITESPACE
+-------------
+Whitespace includes:
+
+    - Spaces
+    - Tabs
+    - New lines
+
+Important points:
+
+    - Java is a free-form language.
+    - Java code can be written across multiple lines or even on
+      a single line.
+    - Whitespace helps separate words and improve readability.
+    - Two words must have at least one space between them when
+      they would otherwise become a single token.
+
+Example:
+
+    int x = 10;     // Correct
+    intx = 10;      // intx is treated as one identifier
+
+Remember:
+    Whitespace generally does not affect program execution,
+    but it can be necessary to separate tokens.
+
+
+3. IDENTIFIERS
+--------------
+Identifiers are names given to program elements, such as:
+
+    - Classes
+    - Variables
+    - Methods
+
+Rules for naming identifiers:
+
+    1. Can contain letters (A-Z, a-z).
+    2. Can contain digits (0-9).
+    3. Can contain underscores (_).
+    4. Can contain dollar signs ($).
+    5. Cannot start with a digit.
+    6. Cannot contain spaces.
+    7. Cannot be a reserved keyword.
+
+Valid identifiers:
+
+    totalMarks
+    student1
+    _count
+    $price
+    BankAccount
+
+Invalid identifiers:
+
+    123student     // Starts with a digit
+    total marks    // Contains a space
+    class          // Reserved keyword
+
+
+4. JAVA IS CASE-SENSITIVE
+-------------------------
+Java treats uppercase and lowercase letters as different.
+
+Examples:
+
+    class   // Java keyword
+    Class   // Can be used as an identifier
+
+    Value   // One identifier
+    VALUE   // A different identifier
+    value   // Another different identifier
+
+Important:
+    - Capitalization matters in Java.
+    - Class names and file names must match in capitalization
+      when the class is public.
+
+Example:
+
+    public class OneLine {
+    }
+
+The file must be named:
+
+    OneLine.java
+
+Not:
+
+    Oneline.java
+
+
+5. JAVA NAMING CONVENTIONS
+--------------------------
+Naming conventions are recommended practices for writing
+readable and understandable Java code.
+
+Variables and methods:
+    Use camelCase.
+
+    Examples:
+        totalMarks
+        studentName
+        calculateSalary()
+
+Class names:
+    Use PascalCase.
+
+    Examples:
+        BankAccount
+        StudentDetails
+        Employee
+
+Constants:
+    Use UPPERCASE with underscores.
+
+    Examples:
+        MAX_SPEED
+        MIN_VALUE
+        PI_VALUE
+
+Important:
+    - Avoid using the dollar sign ($) in normal application
+      identifiers, even though Java allows it.
+    - Follow consistent naming conventions.
+
+
+6. LITERALS
+-----------
+Literals are fixed values written directly in source code.
+
+Types and examples:
+
+    Integer literal:
+        100
+
+    Floating-point literal:
+        98.6
+
+    Character literal:
+        'X'
+
+    String literal:
+        "Hello"
+
+    Boolean literals:
+        true
+        false
+
+Important differences:
+
+    'X'       // Character: single quotes
+    "Hello"   // String: double quotes
+
+    'AB'      // Invalid: a character literal contains one character
+
+Remember:
+    - Character literals use single quotes.
+    - String literals use double quotes.
+    - Boolean literals are true and false.
+
+
+7. COMMENTS
+-----------
+Comments explain code and are ignored by the compiler.
+
+Java provides three common comment styles.
+
+A. Single-line comment:
+
+    // This is a single-line comment
+
+B. Multiline comment:
+
+    /*
+       This is a
+       multiline comment
+    */
+
+C. Documentation comment:
+
+    /**
+     * This is a documentation comment.
+     * It can be used to generate API documentation.
+     */
+
+Important:
+    - // is used for one-line comments.
+    - /* ... */ is used for multiline comments.
+    - /** ... */ is used for documentation comments.
+    - Documentation comments are commonly used with Javadoc.
+
+
+8. SEPARATORS
+-------------
+Separators help organize and separate parts of Java code.
+
+Common separators:
+
+    ;       Semicolon
+    ,       Comma
+    .       Period
+    ( )     Parentheses
+    { }     Curly braces
+    [ ]     Square brackets
+
+Additional separators:
+
+    ::      Method reference operator
+    ...     Varargs notation
+    @       Annotation marker
+
+Examples:
+
+    int age = 20;              // Semicolon
+    int a, b;                  // Comma
+    System.out.println(age);   // Period and parentheses
+    int[] numbers = {1, 2, 3}; // Square and curly brackets
+
+
+9. KEYWORDS
+-----------
+Keywords are special words reserved by Java for specific
+language purposes.
+
+Java has 68 keywords in the classification discussed here:
+
+    A. 51 reserved keywords
+    B. 17 contextual keywords
+
+A. Reserved keywords:
+
+    - Cannot be used as identifiers.
+    - Examples: class, int, goto, const.
+
+B. Contextual keywords:
+
+    - Have special meaning in particular contexts.
+    - Can be used as identifiers in other contexts.
+    - Examples: record, var.
+
+Important:
+    - true and false are boolean literals.
+    - null is the null literal.
+    - These three cannot be used as identifiers either.
+
+
+10. JAVA CLASS LIBRARIES
+------------------------
+Java is more than just a programming language.
+
+It also provides a huge collection of ready-made classes
+that programmers can use in their applications.
+
+These collections are known as Java class libraries.
+
+Example:
+
+    System.out.println("Hello World");
+
+Here:
+
+    System
+        A predefined Java class.
+
+    out
+        A static member of the System class.
+
+    println()
+        A method used to print output.
+
+Remember:
+    Java provides reusable classes and methods, so we do not
+    need to write everything from scratch.
+
+
+IMPORTANT REVISION POINTS
+=========================
+
+1. Java has seven kinds of tokens.
+2. Java is a free-form and case-sensitive language.
+3. Identifiers are names given to classes, variables and methods.
+4. Identifiers cannot start with digits or be reserved keywords.
+5. Follow camelCase, PascalCase and UPPERCASE naming conventions.
+6. Character literals use single quotes.
+7. String literals use double quotes.
+8. Java supports three common comment styles.
+9. Separators organize different parts of Java code.
+10. Keywords have special meanings in Java.
+11. true, false and null cannot be used as identifiers.
+12. Java includes a large collection of reusable class libraries.
